@@ -6,10 +6,7 @@
  */
 
 #include <mrpt_bridge/point_cloud2.h>
-#include <pcl/ros/conversions.h>
-#include <pcl/point_cloud.h>
-#include <pcl_conversions/pcl_conversions.h>
-#include <gtest/gtest.h>
+
 
 #include <mrpt/version.h>
 #if MRPT_VERSION>=0x130
@@ -17,7 +14,10 @@
 #else
 #	include <mrpt/slam/CSimplePointsMap.h>
 #endif
-
+#include <pcl/ros/conversions.h>
+#include <pcl/point_cloud.h>
+#include <pcl_conversions/pcl_conversions.h>
+#include <gtest/gtest.h>
 
 TEST(PointCloud2, basicTest)
 {
